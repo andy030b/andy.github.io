@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My GitHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 頂端導覽（預設隱藏，點擊後淡入） -->
+  <header class="top-bar">
+    <!-- Logo 點擊回頂部 -->
+    <a href="#" class="logo-link-top">
+      <img class="top-logo" src="logo.png" alt="Logo" />
+    </a>
+    <nav class="top-nav">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#interest">Interest</a>
+    </nav>
+  </header>
+
+  <!-- Hero 區域：打字特效 + Hero Logo + 中間選項 -->
+  <main class="hero">
+    <div class="hero-content">
+      <h1 class="typewriter">Welcome to my GitHub</h1>
+      <!-- 主畫面 Logo -->
+      <img class="hero-logo" src="logo.png" alt="Logo" />
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#interest">Interest</a>
+      </nav>
+    </div>
+  </main>
+
+  <!-- 內容區塊 -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p><strong>姓名：</strong>卓大一</p>
+    <p><strong>專長：</strong>Data Anaylsis</p>
+    <p><strong>一句話：</strong>The most precious thing is not where to go, but whome you travel with</p>
+  </section>
+
+  <section id="education" class="section">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>東吳大學</strong> — 巨量資料管理學院學士學位學程 2019-2023</li>
+      <li><strong>國立中山大學</strong> — 應用數學所數據科學組 2023-2025</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="#">Bachelor Degree Graduation Project</a>：簡短描述…</li>
+      <li><a href="#">Master Degree Thesis</a>：簡短描述…</li>
+    </ul>
+  </section>
+
+  <section id="interest" class="section">
+    <h2>Interest</h2>
+    <p>・Reading<br>・Basketball / Badminton<br>・Watching Anime<br>・Gaming<br>・Tasting Sake</p>
+  </section>
+
+  <!-- Footer Bar：始終顯示 -->
+  <footer class="bottom-bar">
+    © 2025 Your Name
+  </footer>
+
+  <!--  Script：處理點擊與顯示 top-bar -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelector('.nav-links');
+      const topBar = document.querySelector('.top-bar');
+      const topNav = document.querySelector('.top-nav');
+      const hero = document.querySelector('.hero');
+
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href');
+          // Hero 淡出
+          hero.classList.add('fade-out');
+          setTimeout(() => {
+            hero.style.display = 'none';
+            // 顯示上方 bar
+            topBar.classList.add('show');
+            topNav.classList.add('show');
+            document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+          }, 500);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
