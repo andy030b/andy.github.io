@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - My GitHub</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 標示當前 Projects 頁面下底線 */
+    .top-nav a.active::after {
+      transform: scaleX(1);
+    }
+    /* 專案區塊間距 */
+    .projects-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .project-block {
+      background: #2a2a2a;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+    /* 調整條列符號與文字間距 */
+    .project-block ul {
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+    .project-block ul li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- 頂端導覽:固定顯示並標示當前頁面 -->
+  <header class="top-bar show">
+    <a href="index.html" class="logo-link-top">
+      <img class="top-logo" src="logo.png" alt="Logo" />
+    </a>
+    <nav class="top-nav show">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="interest.html">Interest</a>
+    </nav>
+  </header>
+
+  <!-- 主內容:Projects 區塊 -->
+  <main class="section projects-page">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project-block">
+        <h3>Bachelor's thesis</h3>
+        <p>Topic: 建構臉部疼痛表情之人臉辨識模型</p>
+        <ul>
+          <li>Target: 透過影像辨識模型，辨別不同疼痛程度的臉部表情變化並加以分類</li>
+          <li>Tools: Python, Tensorflow</li>
+          <!-- <li>特色 3:自動報表生成功能</li> -->
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-block">
+        <h3>Master's thesis</h3>
+        <p>Topic: Longitudinal and cutoff analysis of regional amyloid-beta accumulation with cognitively decline in clinically normal individuals</p>
+        <ul>
+          <li>Target: 使用統計方法尋找類澱粉蛋白的最佳切分點，找尋腦區與認知功能的關聯，並區分不同認知衰退程度的個體</li>
+          <li>Tools: Python, R</li>
+          <!-- <li>特色 3:使用者權限管理</li> -->
+        </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-block">
+        <h3>Course Project</h3>
+        <p>Applied Playable baseball for Literally Everyone, A.P.P.L.E</p>
+        <ul>
+          <li>Target: 透過蒐集EMG並判讀受試者的手部肌電訊號，使用機器學習加以分類，再建立互動介面讓使用者遊玩</li>
+          <li>Tools: Matlab, Python</li>
+          <!-- <li>特色 3:自動擴充能力</li> -->
+        </ul>
+      </div>
+
+      <!-- Project 4 -->
+      <!-- <div class="project-block">
+        <h3>專案四:Delta ML</h3>
+        <p>簡短描述:機器學習模型部署平台。</p>
+        <ul>
+          <li>特色 1:一鍵部署環境</li>
+          <li>特色 2:模型版本控制</li>
+          <li>特色 3:性能監控儀表板</li>
+        </ul>
+      </div> -->
+    </div>
+  </main>
+
+  <!-- Footer Bar:始終顯示 -->
+  <footer class="bottom-bar">© 2025 卓大一</footer>
+
+  <script>
+    // （若需要，可新增互動腳本）
+  </script>
+</body>
+</html>

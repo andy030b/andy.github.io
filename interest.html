@@ -1,59 +1,35 @@
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Interest - My GitHub</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 高亮標示當前頁面下底線 */
+    .top-nav a.active::after {
+      transform: scaleX(1);
+    }
+  </style>
 </head>
 <body>
-  <!-- 頂端導覽 -->
-  <header class="top-bar">
+  <!-- 頂端導覽：固定顯示並標示當前頁面 -->
+  <header class="top-bar show">
     <a href="index.html" class="logo-link-top">
       <img class="top-logo" src="logo.png" alt="Logo" />
     </a>
-    <nav class="top-nav">
-      <ul>
-        <li class="dropdown">
-          <a href="#">Reading</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Chapter 1: Book List</a></li>
-            <li><a href="#">Chapter 2: Reviews</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Sports</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Equipment</a></li>
-            <li><a href="#">Matches</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Anime</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Seasonal Picks</a></li>
-            <li><a href="#">Top Characters</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Gaming</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Game Reviews</a></li>
-            <li><a href="#">Live Streams</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Sake</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Recommended Brands</a></li>
-            <li><a href="#">Tasting Notes</a></li>
-          </ul>
-        </li>
-      </ul>
+    <nav class="top-nav show">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="projects.html">Projects</a>
+      <a href="interest.html" class="active">Interest</a>
     </nav>
   </header>
 
   <!-- 主內容 -->
   <main class="section interest-page">
+    <!-- 主分類按鈕 -->
     <nav class="filter-nav">
       <a href="#Reading" class="filter-btn active">Reading</a>
       <a href="#Sports" class="filter-btn">Sports</a>
@@ -61,8 +37,8 @@
       <a href="#Gaming" class="filter-btn">Gaming</a>
       <a href="#Sake" class="filter-btn">Sake</a>
     </nav>
-    <div class="filter-content">
 
+    <div class="filter-content">
       <!-- Reading -->
       <div id="Reading" class="item">
         <div class="sub-filter-nav">
@@ -107,7 +83,7 @@
           <a href="#Action" class="sub-btn">動作戰鬥</a>
         </div>
         <div class="sub-content">
-          <!-- 戀愛喜劇 排行表 -->
+          <!-- 戀愛喜劇 排行 -->
           <div id="RomCom" class="sub-item">
             <div class="ranking-controls">
               <label>依據排序：</label>
@@ -119,13 +95,7 @@
             <table class="ranking-table">
               <thead>
                 <tr>
-                  <th>排名</th>
-                  <th>作品</th>
-                  <th data-key="overall">綜合</th>
-                  <th data-key="story">劇情</th>
-                  <th data-key="character">角色</th>
-                  <th data-key="animation">動畫</th>
-                  <th>評語</th>
+                  <th>排名</th><th>作品</th><th data-key="overall">綜合</th><th data-key="story">劇情</th><th data-key="character">角色</th><th data-key="animation">動畫</th><th>評語</th>
                 </tr>
               </thead>
               <tbody>
@@ -133,27 +103,27 @@
                   <td></td><td>四月是你的謊言</td><td>9.3</td><td>9.6</td><td>9.0</td><td>8.0</td><td>經典作品必看</td>
                 </tr>
                 <tr data-overall="9.0" data-story="9.0" data-character="9.4" data-animation="9.1">
-                  <td></td><td>堀與宮村</td><td>9.0</td><td>9.0</td><td>9.4</td><td>9.1</td><td>個人蠻喜歡畫風，每個角色的故事都有兼顧</td>
+                  <td></td><td>堀與宮村</td><td>9.0</td><td>9.0</td><td>9.4</td><td>9.1</td><td>蠻喜歡畫風，每個角色的故事都有兼顧</td>
                 </tr>
                 <tr data-overall="8.5" data-story="9.5" data-character="8.8" data-animation="8.0">
                   <td></td><td>青春豬頭少年不會夢到兔女郎學姊</td><td>8.5</td><td>9.5</td><td>8.8</td><td>8.0</td><td>人活著就是為了櫻島麻衣</td>
                 </tr>
                 <tr data-overall="8.8" data-story="8.6" data-character="8.9" data-animation="9.3">
-                  <td></td><td>徹夜之歌</td><td>8.8</td><td>8.6</td><td>8.9</td><td>9.3</td><td>看了一集：到底在演什麼，再看一集。慢熱，大概花了半季才進入狀況</td>
+                  <td></td><td>徹夜之歌</td><td>8.8</td><td>8.6</td><td>8.9</td><td>9.3</td><td>慢熱，花半季才進入狀況</td>
                 </tr>
                 <tr data-overall="9.0" data-story="8.9" data-character="9.0" data-animation="9.5">
-                  <td></td><td>青春之箱</td><td>9.0</td><td>8.9</td><td>9.0</td><td>9.5</td><td>動畫經費拉滿，運動結合校園戀愛，角色個性有描繪出來</td>
+                  <td></td><td>青春之箱</td><td>9.0</td><td>8.9</td><td>9.0</td><td>9.5</td><td>動畫經費拉滿，角色個性有描繪</td>
                 </tr>
                 <tr data-overall="8.7" data-story="9.0" data-character="9.0" data-animation="8.0">
-                  <td></td><td>擅長捉弄人的高木同學</td><td>8.7</td><td>9.0</td><td>9.0</td><td>8.0</td><td>戶政事戶所我搬來了，給我原地結婚，現在!立刻!馬上!</td>
+                  <td></td><td>擅長捉弄人的高木同學</td><td>8.7</td><td>9.0</td><td>9.0</td><td>8.0</td><td>高木同學原地結婚，現在!</td>
                 </tr>
                 <tr data-overall="9.4" data-story="9.7" data-character="9.4" data-animation="9.1">
-                  <td></td><td>我內心的糟糕念頭</td><td>9.4</td><td>9.7</td><td>9.4</td><td>9.1</td><td>慢熱作品(5集)，但主角的成長心境很有感觸</td>
+                  <td></td><td>我內心的糟糕念頭</td><td>9.4</td><td>9.7</td><td>9.4</td><td>9.1</td><td>慢熱(5集)，主角成長很有感觸</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <!-- 動作戰鬥 排行表 -->
+          <!-- 動作戰鬥 排行 -->
           <div id="Action" class="sub-item">
             <div class="ranking-controls">
               <label>依據排序：</label>
@@ -165,13 +135,7 @@
             <table class="ranking-table">
               <thead>
                 <tr>
-                  <th>排名</th>
-                  <th>作品</th>
-                  <th data-key="overall">綜合</th>
-                  <th data-key="story">劇情</th>
-                  <th data-key="character">角色</th>
-                  <th data-key="animation">動畫</th>
-                  <th>評語</th>
+                  <th>排名</th><th>作品</th><th data-key="overall">綜合</th><th data-key="story">劇情</th><th data-key="character">角色</th><th data-key="animation">動畫</th><th>評語</th>
                 </tr>
               </thead>
               <tbody>
@@ -185,7 +149,6 @@
             </table>
           </div>
         </div>
-        </table>
       </div>
 
       <!-- Gaming -->
@@ -206,100 +169,95 @@
         </div>
       </div>
 
-      <!-- Sake 排行榜 -->
-<div id="Sake" class="item">
-  <h2>Sake 排行榜</h2>
-  <table class="ranking-table sake-table">
-    <thead>
-      <tr>
-        <th>排名</th>
-        <th>銘柄</th>
-        <th>酒造</th>
-        <th>酒米</th>
-        <th>精米步合</th>
-        <th>類型</th>
-        <th>口感</th>
-        <th>製造日期</th>
-        <th>開瓶日期</th>
-        <th>評語</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- 範例資料，請自行複製以下格式並修改 data-overall 及其他欄位 -->
-      <tr data-overall="9.1">
-        <td></td>
-        <td>千代結</td>
-        <td>千代結</td>
-        <td>山田錦</td>
-        <td>50%</td>
-        <td>薰酒</td>
-        <td>淡麗甘口</td>
-        <td>2024-10-01</td>
-        <td>2025-01-05</td>
-        <td>山田錦的味道</td>
-      </tr>
-      <!-- 如上多筆 -->
-    </tbody>
-  </table>
-</div>
-
+      <!-- Sake -->
+      <div id="Sake" class="item">
+        <h2>Sake 排行榜</h2>
+        <table class="ranking-table sake-table">
+          <thead>
+            <tr>
+              <th>排名</th><th>銘柄</th><th>酒造</th><th>酒米</th><th>精米步合</th><th>類型</th><th>口感</th><th>製造日期</th><th>開瓶日期</th><th>評語</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-overall="9.1">
+              <td></td><td>千代結</td><td>千代結</td><td>山田錦</td><td>50%</td><td>薰酒</td><td>淡麗甘口</td><td>2024-10-01</td><td>2025-01-05</td><td>山田錦的味道</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="bottom-bar">
-    © 2025 卓大一
-  </footer>
+  <footer class="bottom-bar">© 2025 卓大一</footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      /* 主分類切換 */
+      // 主分類切換
       const buttons = document.querySelectorAll('.filter-btn');
       const items = document.querySelectorAll('.filter-content .item');
-      function showTab(id) { items.forEach(div => div.style.display = div.id===id?'block':'none'); }
+      function showTab(id) {
+        items.forEach(div => div.style.display = div.id === id ? 'block' : 'none');
+      }
       buttons.forEach(btn => btn.addEventListener('click', e => {
-        e.preventDefault(); buttons.forEach(b=>b.classList.remove('active'));
-        btn.classList.add('active'); showTab(btn.getAttribute('href').slice(1));
+        e.preventDefault();
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        showTab(btn.getAttribute('href').slice(1));
       }));
       showTab('Reading');
-      /* 子分類通用 */
-      document.querySelectorAll('.sub-filter-nav').forEach(nav=>{
-        const subs=[...nav.querySelectorAll('.sub-btn')];
-        const parentId=nav.closest('.item').id;
-        const subItems=[...document.querySelectorAll(`#${parentId} .sub-item`)];
-        function showSub(id){subItems.forEach(si=>si.style.display=si.id===id?'block':'none');}
-        subs.forEach(btn=>btn.addEventListener('click',e=>{
-          e.preventDefault(); subs.forEach(b=>b.classList.remove('active'));
-          btn.classList.add('active'); showSub(btn.getAttribute('href').slice(1));
+
+      // 子分類切換
+      document.querySelectorAll('.sub-filter-nav').forEach(nav => {
+        const subs = [...nav.querySelectorAll('.sub-btn')];
+        const parentId = nav.closest('.item').id;
+        const subItems = [...document.querySelectorAll(`#${parentId} .sub-item`)];
+        function showSub(id) {
+          subItems.forEach(si => si.style.display = si.id === id ? 'block' : 'none');
+        }
+        subs.forEach(btn => btn.addEventListener('click', e => {
+          e.preventDefault();
+          subs.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          showSub(btn.getAttribute('href').slice(1));
         }));
         showSub(subs[0].getAttribute('href').slice(1));
       });
-    });
-    document.addEventListener('DOMContentLoaded', () => {
-      const buttons = document.querySelectorAll('.rank-btn');
-      const tbody = document.querySelector('.ranking-table tbody');
-      let rows = Array.from(tbody.querySelectorAll('tr'));
 
-      function sortBy(key) {
-        rows.sort((a, b) => parseFloat(b.dataset[key]) - parseFloat(a.dataset[key]));
-        tbody.innerHTML = '';
-        rows.forEach((row, idx) => {
-          row.querySelector('td').textContent = idx + 1;
-          tbody.appendChild(row);
-        });
-      }
-
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          buttons.forEach(b => b.classList.remove('active'));
+      // 排行排序（Anime）
+      document.querySelectorAll('.ranking-controls').forEach(ctrl => {
+        const rankBtns = [...ctrl.querySelectorAll('.rank-btn')];
+        const table = ctrl.nextElementSibling;
+        const tbody = table.querySelector('tbody');
+        let rows = Array.from(tbody.querySelectorAll('tr'));
+        function sortBy(key) {
+          rows.sort((a, b) => parseFloat(b.dataset[key]) - parseFloat(a.dataset[key]));
+          tbody.innerHTML = '';
+          rows.forEach((row, idx) => {
+            row.querySelector('td').textContent = idx + 1;
+            tbody.appendChild(row);
+          });
+        }
+        rankBtns.forEach(btn => btn.addEventListener('click', () => {
+          rankBtns.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
           sortBy(btn.dataset.sort);
-        });
+        }));
+        sortBy('overall');
       });
 
-      // 初始以綜合排序
-      sortBy('overall');
+      // 排行排序（Sake）
+      const sakeBody = document.querySelector('.sake-table tbody');
+      if (sakeBody) {
+        const sakeRows = Array.from(sakeBody.querySelectorAll('tr'));
+        sakeRows.sort((a, b) => parseFloat(b.dataset.overall) - parseFloat(a.dataset.overall));
+        sakeBody.innerHTML = '';
+        sakeRows.forEach((row, idx) => {
+          row.querySelector('td').textContent = idx + 1;
+          sakeBody.appendChild(row);
+        });
+      }
     });
   </script>
 </body>
 </html>
+```
