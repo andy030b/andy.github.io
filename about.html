@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - My GitHub</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 標示當前 Projects 頁面下底線 */
+    .top-nav a.active::after {
+      transform: scaleX(1);
+    }
+    /* 專案區塊間距 */
+    .projects-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .project-block {
+      background: #2a2a2a;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+    /* 調整條列符號與文字間距 */
+    .project-block ul {
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+    .project-block ul li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- 頂端導覽:固定顯示並標示當前頁面 -->
+  <header class="top-bar show">
+    <a href="index.html" class="logo-link-top">
+      <img class="top-logo" src="logo.png" alt="Logo" />
+    </a>
+    <nav class="top-nav show">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <!-- <a href="education.html">Education</a> -->
+      <a href="projects.html" class="active">Projects</a>
+      <a href="interest.html">Interest</a>
+      <a href="japanese.html">五十音練習</a>
+
+    </nav>
+  </header>
+
+  <!-- 主內容:Projects 區塊 -->
+  <main class="section projects-page">
+    Working on it....
+  </main>
+
+  <!-- Footer Bar:始終顯示 -->
+  <footer class="bottom-bar">© 2025 卓大一</footer>
+
+  <script>
+    // （若需要，可新增互動腳本）
+  </script>
+</body>
+</html>

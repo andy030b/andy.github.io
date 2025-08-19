@@ -299,9 +299,9 @@ body {
 /* 讓排行榜表格更寬 */
 .ranking-table,
 .sake-table {
-  width: 50vw;
+  width: 60vw;
   max-width: none;
   /* 將表格置中：
      viewport 寬度的一半減去 45vw，讓 90vw 的表格水平置中 */
-  margin-left: calc(50% - 25vw);
+  margin-left: calc(50% - 30vw);
 }
